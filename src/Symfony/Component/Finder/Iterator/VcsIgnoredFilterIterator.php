@@ -73,6 +73,7 @@ final class VcsIgnoredFilterIterator extends \FilterIterator
 
         if (!$ignored) {
             $isDir = is_dir($fileRealPath);
+            $matched = false;
 
             // the last matching rule of the deepest .gitignore file decides
             foreach (array_reverse($parentDirectories) as $parentDirectory) {
@@ -89,8 +90,28 @@ final class VcsIgnoredFilterIterator extends \FilterIterator
 
                     if (preg_match($regex, $fileRelativePath, $matches) && $matches[0] === $fileRelativePath) {
                         $ignored = !$isNegated;
+                        $matched = true;
 
                         break 2;
+                    }
+                }
+            }
+
+            // .gitignore files take precedence over the repository's exclude file
+            if (!$matched && is_dir("{$this->baseDir}/.git")) {
+                if (null !== $rules = $this->readGitignoreFile("{$this->baseDir}/.git/info/exclude")) {
+                    $fileRelativePath = substr($fileRealPath, \strlen($this->baseDir) + 1);
+
+                    foreach ($rules as [$regex, $isNegated, $isDirOnly]) {
+                        if ($isDirOnly && !$isDir) {
+                            continue;
+                        }
+
+                        if (preg_match($regex, $fileRelativePath, $matches) && $matches[0] === $fileRelativePath) {
+                            $ignored = !$isNegated;
+
+                            break;
+                        }
                     }
                 }
             }
