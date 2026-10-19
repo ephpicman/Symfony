@@ -515,6 +515,53 @@ class VcsIgnoredFilterIteratorTest extends IteratorTestCase
         }
     }
 
+    public function testIgnoreGitInfoExclude()
+    {
+        mkdir($this->tmpDir.'/.git/info', 0777, true);
+        file_put_contents($this->tmpDir.'/.git/info/exclude', "excluded.txt\n");
+        touch($this->tmpDir.'/excluded.txt');
+        touch($this->tmpDir.'/visible.txt');
+
+        $finder = Finder::create()
+            ->files()
+            ->in($this->tmpDir)
+            ->ignoreVCSIgnored(true);
+
+        $this->assertIterator($this->toAbsolute(['visible.txt']), $finder->getIterator());
+    }
+
+    public function testGitignoreRulesTakePrecedenceOverGitInfoExclude()
+    {
+        mkdir($this->tmpDir.'/.git/info', 0777, true);
+        file_put_contents($this->tmpDir.'/.git/info/exclude', "excluded.txt\n");
+        file_put_contents($this->tmpDir.'/.gitignore', "!excluded.txt\n");
+        touch($this->tmpDir.'/excluded.txt');
+        touch($this->tmpDir.'/visible.txt');
+
+        $finder = Finder::create()
+            ->files()
+            ->in($this->tmpDir)
+            ->ignoreVCSIgnored(true);
+
+        $this->assertIterator($this->toAbsolute(['excluded.txt', 'visible.txt']), $finder->getIterator());
+    }
+
+    public function testGitignoreRulesCanOverrideNegatedGitInfoExcludeRules()
+    {
+        mkdir($this->tmpDir.'/.git/info', 0777, true);
+        file_put_contents($this->tmpDir.'/.git/info/exclude', "!excluded.txt\n");
+        file_put_contents($this->tmpDir.'/.gitignore', "excluded.txt\n");
+        touch($this->tmpDir.'/excluded.txt');
+        touch($this->tmpDir.'/visible.txt');
+
+        $finder = Finder::create()
+            ->files()
+            ->in($this->tmpDir)
+            ->ignoreVCSIgnored(true);
+
+        $this->assertIterator($this->toAbsolute(['visible.txt']), $finder->getIterator());
+    }
+
     private function toAbsolute(array $files): array
     {
         foreach ($files as &$path) {
