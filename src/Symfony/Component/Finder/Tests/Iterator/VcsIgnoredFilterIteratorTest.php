@@ -562,6 +562,23 @@ class VcsIgnoredFilterIteratorTest extends IteratorTestCase
         $this->assertIterator($this->toAbsolute(['visible.txt']), $finder->getIterator());
     }
 
+    public function testGitInfoExcludePatternsAreRelativeToRepositoryRoot()
+    {
+        mkdir($this->tmpDir.'/.git/info', 0777, true);
+        mkdir($this->tmpDir.'/nested');
+        file_put_contents($this->tmpDir.'/.git/info/exclude', "nested/excluded.txt\n");
+        touch($this->tmpDir.'/nested/excluded.txt');
+        touch($this->tmpDir.'/nested/visible.txt');
+        touch($this->tmpDir.'/visible.txt');
+
+        $finder = Finder::create()
+            ->files()
+            ->in($this->tmpDir)
+            ->ignoreVCSIgnored(true);
+
+        $this->assertIterator($this->toAbsolute(['nested/visible.txt', 'visible.txt']), $finder->getIterator());
+    }
+
     private function toAbsolute(array $files): array
     {
         foreach ($files as &$path) {
