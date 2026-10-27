@@ -136,7 +136,7 @@
             </trans-unit>
             <trans-unit id="129" resname="Please enter a valid UUID.">
                 <source>This value is not a valid UUID.</source>
-                <target>شناسه یکتای کاربر معتبر نیست.</target>
+                <target>شناسه یکتا معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="130">
                 <source>The lower bound must not be greater than the upper bound.</source>
