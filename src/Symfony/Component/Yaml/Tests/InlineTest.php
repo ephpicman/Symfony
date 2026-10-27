@@ -1381,6 +1381,27 @@ class InlineTest extends TestCase
         );
     }
 
+    public function testParseMergeKeyPreservesExplicitValuesAndFirstMergedValue()
+    {
+        $yaml = <<<'YAML'
+            defaults: &defaults
+                color: blue
+                size: medium
+            other: &other
+                color: green
+                weight: light
+            item:
+                <<: [*defaults, *other]
+                color: red
+            YAML;
+
+        $this->assertSame([
+            'defaults' => ['color' => 'blue', 'size' => 'medium'],
+            'other' => ['color' => 'green', 'weight' => 'light'],
+            'item' => ['color' => 'red', 'size' => 'medium', 'weight' => 'light'],
+        ], Yaml::parse($yaml));
+    }
+
     public function testParseQuotedMergeKeyAsRegularKey()
     {
         $this->assertSame(['<<' => 'foo', 'bar' => 2], Inline::parse("{ '<<': foo, bar: 2 }"));
