@@ -1433,3 +1433,4 @@ class InlineTest extends TestCase
         Inline::parse('{ foo: 1, "\0": 1 }', Yaml::PARSE_OBJECT_FOR_MAP);
     }
 }
+
