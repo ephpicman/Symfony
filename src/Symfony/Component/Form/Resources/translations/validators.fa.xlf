@@ -36,11 +36,11 @@
             </trans-unit>
             <trans-unit id="104" resname="Please select a valid country.">
                 <source>This value is not a valid country.</source>
-                <target>کشور انتخاب شده معتبر نیست.</target>
+                <target>کشور انتخاب شده صحیح نیست.</target>
             </trans-unit>
             <trans-unit id="105" resname="Please select a valid currency.">
                 <source>This value is not a valid currency.</source>
-                <target>واحد پول انتخاب شده معتبر نیست.</target>
+                <target>واحد پول انتخاب شده صحیح نیست.</target>
             </trans-unit>
             <trans-unit id="106" resname="Please choose a valid date interval.">
                 <source>This value is not a valid date interval.</source>
@@ -64,11 +64,11 @@
             </trans-unit>
             <trans-unit id="111" resname="Please enter an integer.">
                 <source>This value is not a valid integer.</source>
-                <target>مقدار وارد شده عدد صحیح نیست.</target>
+                <target>مقدار وارد شده عدد صحیح معتبری نیست.</target>
             </trans-unit>
             <trans-unit id="112" resname="Please select a valid language.">
                 <source>This value is not a valid language.</source>
-                <target>زبان انتخاب شده معتبر نیست.</target>
+                <target>زبان انتخاب شده صحیح نیست.</target>
             </trans-unit>
             <trans-unit id="113" resname="Please select a valid locale.">
                 <source>This value is not a valid locale.</source>
@@ -108,7 +108,7 @@
             </trans-unit>
             <trans-unit id="122" resname="Please enter a valid search term.">
                 <source>This value is not a valid search term.</source>
-                <target>عبارت جستجو معتبر نیست.</target>
+                <target>عبارت جستجو صحیح نیست.</target>
             </trans-unit>
             <trans-unit id="123" resname="Please provide a valid phone number.">
                 <source>This value is not a valid phone number.</source>
@@ -116,11 +116,11 @@
             </trans-unit>
             <trans-unit id="124">
                 <source>The checkbox has an invalid value.</source>
-                <target>مقدار کادر انتخاب معتبر نیست.</target>
+                <target>مقدار کادر انتخاب صحیح نیست.</target>
             </trans-unit>
             <trans-unit id="125" resname="Please enter a valid email address.">
                 <source>This value is not a valid email address.</source>
-                <target>ایمیل وارد شده صحیح نیست.</target>
+                <target>نشانی ایمیل معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="126" resname="Please select a valid option.">
                 <source>This value is not a valid option.</source>
@@ -132,7 +132,7 @@
             </trans-unit>
             <trans-unit id="128" resname="Please enter a valid week.">
                 <source>This value is not a valid week.</source>
-                <target>مقدار هفته صحیح نیست.</target>
+                <target>مقدار هفته معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="129" resname="Please enter a valid UUID.">
                 <source>This value is not a valid UUID.</source>
