@@ -140,7 +140,7 @@
             </trans-unit>
             <trans-unit id="130">
                 <source>The lower bound must not be greater than the upper bound.</source>
-                <target>کران پایین نباید از کران بالا بزرگتر باشد.</target>
+                <target>مقدار حداقل نباید از مقدار حداکثر بیشتر باشد.</target>
             </trans-unit>
         </body>
     </file>
