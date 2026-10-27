@@ -16,11 +16,11 @@
             </trans-unit>
             <trans-unit id="99">
                 <source>This value is not a valid HTML5 color.</source>
-                <target>رنگ وارد شده معتبر نیست.</target>
+                <target>رنگ معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="100" resname="Please enter a valid birthdate.">
                 <source>This value is not a valid birthdate.</source>
-                <target>تاریخ تولد وارد شده معتبر نیست.</target>
+                <target>تاریخ تولد معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="101">
                 <source>The selected choice is invalid.</source>
@@ -48,11 +48,11 @@
             </trans-unit>
             <trans-unit id="107" resname="Please enter a valid date and time.">
                 <source>This value is not a valid date and time.</source>
-                <target>تاریخ و زمان وارد شده معتبر نیست.</target>
+                <target>تاریخ و زمان معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="108" resname="Please enter a valid date.">
                 <source>This value is not a valid date.</source>
-                <target>تاریخ وارد شده معتبر نیست.</target>
+                <target>تاریخ معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="109" resname="Please select a valid file.">
                 <source>This value is not a valid file.</source>
@@ -76,15 +76,15 @@
             </trans-unit>
             <trans-unit id="114" resname="Please enter a valid money amount.">
                 <source>This value is not a valid money amount.</source>
-                <target>مبلغ وارد شده معتبر نیست.</target>
+                <target>مبلغ معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="115" resname="Please enter a number.">
                 <source>This value is not a valid number.</source>
-                <target>عدد وارد شده معتبر نیست.</target>
+                <target>عدد معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="116">
                 <source>The password is invalid.</source>
-                <target>رمز عبور وارد شده صحیح نیست.</target>
+                <target>رمز عبور صحیح نیست.</target>
             </trans-unit>
             <trans-unit id="117" resname="Please enter a percentage value.">
                 <source>This value is not a valid percentage.</source>
@@ -112,7 +112,7 @@
             </trans-unit>
             <trans-unit id="123" resname="Please provide a valid phone number.">
                 <source>This value is not a valid phone number.</source>
-                <target>شماره تلفن وارد شده معتبر نیست.</target>
+                <target>شماره تلفن معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="124">
                 <source>The checkbox has an invalid value.</source>
