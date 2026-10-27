@@ -28,7 +28,7 @@
             </trans-unit>
             <trans-unit id="102">
                 <source>The collection is invalid.</source>
-                <target>اطلاعات وارد شده صحیح نیست.</target>
+                <target>این مجموعه نامعتبر است.</target>
             </trans-unit>
             <trans-unit id="103" resname="Please select a valid color.">
                 <source>This value is not a valid color.</source>
@@ -136,11 +136,11 @@
             </trans-unit>
             <trans-unit id="129" resname="Please enter a valid UUID.">
                 <source>This value is not a valid UUID.</source>
-                <target>شناسه یکتا معتبر نیست.</target>
+                <target>شناسه یکتای کاربر معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="130">
                 <source>The lower bound must not be greater than the upper bound.</source>
-                <target>مقدار حداقل نباید از مقدار حداکثر بیشتر باشد.</target>
+                <target>حد پایین نباید بزرگتر از حد بالا باشد.</target>
             </trans-unit>
         </body>
     </file>
