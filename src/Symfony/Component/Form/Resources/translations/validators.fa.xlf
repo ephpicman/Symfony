@@ -108,7 +108,7 @@
             </trans-unit>
             <trans-unit id="122" resname="Please enter a valid search term.">
                 <source>This value is not a valid search term.</source>
-                <target>عبارت جستجوی وارد شده صحیح نیست.</target>
+                <target>عبارت جستجو معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="123" resname="Please provide a valid phone number.">
                 <source>This value is not a valid phone number.</source>
