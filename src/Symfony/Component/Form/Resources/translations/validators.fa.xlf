@@ -104,7 +104,7 @@
             </trans-unit>
             <trans-unit id="121" resname="Please enter a valid URL.">
                 <source>This value is not a valid URL.</source>
-                <target>نشانی وارد شده معتبر نیست.</target>
+                <target>نشانی اینترنتی معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="122" resname="Please enter a valid search term.">
                 <source>This value is not a valid search term.</source>
