@@ -92,7 +92,7 @@
             </trans-unit>
             <trans-unit id="118">
                 <source>The values do not match.</source>
-                <target>مقادیر وارد شده با هم مطابقت ندارند.</target>
+                <target>مقادیر با هم مطابقت ندارند.</target>
             </trans-unit>
             <trans-unit id="119" resname="Please enter a valid time.">
                 <source>This value is not a valid time.</source>
@@ -136,7 +136,7 @@
             </trans-unit>
             <trans-unit id="129" resname="Please enter a valid UUID.">
                 <source>This value is not a valid UUID.</source>
-                <target>شناسه معتبر نیست.</target>
+                <target>شناسه یکتا معتبر نیست.</target>
             </trans-unit>
             <trans-unit id="130">
                 <source>The lower bound must not be greater than the upper bound.</source>
